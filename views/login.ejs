@@ -1,2 +1,9 @@
 <h1>Hello</h1>
-<%=user.id%>
+table class="table">
+        <% for(key in user.toJSON() ) { if (user.hasOwnProperty(key)) { %>
+        <tr>
+          <td><%= key %>:</td>
+          <td class="boxy"><%= user[key] %></td>
+        </tr>
+        <% }} %>
+      </table>
