@@ -8,18 +8,6 @@ _.merge(exports, {
   
   // Extend with custom logic here by adding additional fields, methods, etc.
  
-
-});
-module.exports.passport={
-local: {
-    strategy: require('passport-local').Strategy
-  },
-
-  basic: {
-    strategy: require('passport-http').BasicStrategy,
-    protocol: 'basic'
-  },
-
   facebook: {
     name: 'Facebook',
     protocol: 'oauth2',
@@ -30,5 +18,8 @@ local: {
       scope: ['email'] 
     }
   }
-};
+
+
+});
+
  
