@@ -29,7 +29,7 @@
 
 module.exports = {
 
-  proxyHost : 'reviewsquare.herokuapp.com'
+  proxyHost : 'reviewsquare.herokuapp.com/'
 
 
   /***************************************************************************
