@@ -4,10 +4,10 @@ var _ = require('lodash');
 var _super = require('sails-permissions/config/passport');
 
 _.merge(exports, _super);
-_.merge(exports, {
+_.merge(exports.passport, {
   
-  // Extend with custom logic here by adding additional fields, methods, etc.
- 
+  // Extend with custom logic here by adding additional fields, methods, etc. 
+
   facebook: {
     name: 'Facebook',
     protocol: 'oauth2',
@@ -18,8 +18,4 @@ _.merge(exports, {
       scope: ['email'] 
     }
   }
-
-
 });
-
- 
