@@ -28,12 +28,7 @@ local: {
       clientID: '436918573176696',
       clientSecret: 'acfc7bd6a5eb4eecbd684ce4bd249a13',
       scope: ['email'] 
-    },
-     function(accessToken, refreshToken, profile, done) {
-        User.findOrCreate({ facebookId: profile.id }, function (err, user) {
-          return done(err, user);
-        });
-      }
+    }
   }
 };
  
