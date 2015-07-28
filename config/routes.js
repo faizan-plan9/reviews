@@ -38,7 +38,8 @@ module.exports.routes = {
 
   '/login': {
 
-    controller: "test"
+    controller: "test",
+    action:"index"
   }
   /***************************************************************************
   *                                                                          *

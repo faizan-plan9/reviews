@@ -33,7 +33,11 @@ module.exports.policies = {
 
   AuthController: {
     '*': ['passport']
+  },
+  TestController:{
+    '*': true
   }
+
 
 
 
