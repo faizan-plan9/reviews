@@ -7,7 +7,8 @@
 
 module.exports = {
 	index: function(req, res) {
-    console.log(req.body);
+    console.log("asdadasd");
+    console.log(sails.getBaseUrl());
     if(req.isAuthenticated()){
     	console.log("sdadfaf");
     }
