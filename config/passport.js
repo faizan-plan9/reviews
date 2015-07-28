@@ -28,7 +28,8 @@ local: {
       clientID: '436918573176696',
       clientSecret: 'acfc7bd6a5eb4eecbd684ce4bd249a13',
       scope: ['read_stream'] 
-    }
+    },
+    callbackURL: "http://reviewsquare.herokuapp.com/auth/facebook/callback"
   }
 };
  
