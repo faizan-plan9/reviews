@@ -33,6 +33,7 @@ local: {
         User.findOrCreate({ facebookId: profile.id }, function (err, user) {
           return done(err, user);
         });
+      }
   }
 };
  
