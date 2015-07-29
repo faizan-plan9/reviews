@@ -15,7 +15,7 @@ _.extend(passport.prototype, {
     console.log(provider);
     // Passport.js wasn't really built for local user registration, but it's nice
     // having it tied into everything else.
-    if (provider === 'local' && action !== undefined) {
+    if (action !== undefined) {
       if (action === 'register' && !req.user) {
         this.protocols.local.register(req, res, next);
       }
