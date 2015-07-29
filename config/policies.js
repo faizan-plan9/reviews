@@ -36,6 +36,9 @@ module.exports.policies = {
   },
   TestController:{
     '*': true
+  },
+  UserController:{
+    'create':true
   }
 
 
