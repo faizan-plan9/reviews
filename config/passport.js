@@ -15,7 +15,7 @@ _.merge(exports.passport, {
     options: {
       clientID: '436918573176696',
       clientSecret: 'acfc7bd6a5eb4eecbd684ce4bd249a13',
-      scope: ['email'] 
+      scope: ['user_status', 'user_checkins','email'] 
     }
   }
 });
