@@ -8,7 +8,19 @@ _.merge(exports, {
 
   // Extend with custom logic here by adding additional fields, methods, etc.
 
-  
+    create: function (req, res, next) {
+    sails.services.passport.protocols.local.register(req.body, function (err, user) {
+      if (err) return next(err);
+      res.ok(user);
+    });
+
+
+
+    
+      sails.services.passport.protocols.local.login(req.body,function (err,user){
+		if (err) return next(err);
+      });
+  }
 
 
 });
