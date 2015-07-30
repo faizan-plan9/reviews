@@ -2,7 +2,7 @@
 
 var _ = require('lodash');
 var _super = require('sails-permissions/api/controllers/UserController');
-var AuthController = require('./AuthController.js');
+var AuthController = require('./AuthController');
 
 _.merge(exports, _super);
 _.merge(exports, {
@@ -22,18 +22,15 @@ _.merge(exports, {
     req.param('username', identifier);
     req.param('password', password);
 
-    console.log(req.body);
 
 
 
 
 
-    //OK SO THE CALLBACK IS WORKING YESSSSS!!
-	 AuthController.callback(req,res, function (err, user){
-	 	if (err) return next(err);
-	 	res.ok(user);
-	 });
-	//BUT!, ONLY USERNAME AND EMAIL ARE BEING PASSED AS PARAMETERS, and action is not being passed either!! we're fucked!
+
+    //WE NEED TO MAKE THIS FUCKNG CALLBACK HAPPEN OR IT IS ALL WORTHLESS
+	// sails.controllers.AuthController.callback(req,res);
+	//DO SOMETHING GONDAL SAMA! 
 
 
 
@@ -53,7 +50,7 @@ _.merge(exports, {
 
 
 
-
+       res.ok(user);
     // });
 });
 
