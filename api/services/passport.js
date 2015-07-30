@@ -39,7 +39,7 @@ _.extend(passport.prototype, {
         // the authentication process by attempting to obtain an access token. If
         // access was granted, the user will be logged in. Otherwise, authentication
         // has failed.
-        console.log("Hello");
+        console.log("passport service was called via callback");
         this.authenticate(provider, next)(req, res, req.next);
       }
     }

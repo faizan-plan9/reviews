@@ -37,8 +37,8 @@ module.exports.globals = {
   *                                                                           *
   ****************************************************************************/
 
-	sails: true
-
+	sails: true,
+  controllers: true
   /****************************************************************************
   *                                                                           *
   * Expose each of your app's services as global variables (using their       *
