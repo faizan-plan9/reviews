@@ -7,20 +7,35 @@ var AuthController = require('./AuthController');
 _.merge(exports, _super);
 _.merge(exports, {
 
-  // Extend with custom logic here by adding additional fields, methods, etc.
   create: function (req, res, next) {
-  	var identifier = req.param('username');
-	var password =  req.param('password');
-	console.log("override is working");
+    req.session.autouser = req.param('username');
+    req.session.autopwd = req.param('password');
+    req.session.autouser = req.param('username');
+    req.session.autoaction = 'login';
+    
     sails.services.passport.protocols.local.register(req.body, function (err, user) {
-    	console.log("user registered");
       if (err) return next(err);
 
- //	res.ok();
-    req.param('action', 'login');
-    req.param('provider', 'local');
-    req.param('username', identifier);
-    req.param('password', password);
+      res.redirect('test');
+      // var hello=req.param.all();
+      // AuthController.callback(req,res);
+    });
+  }
+
+  // Extend with custom logic here by adding additional fields, methods, etc.
+  // create: function (req, res, next) {
+  // 	var identifier = req.param('username');
+	 //  var password =  req.param('password');
+	 // console.log("override is working");
+  //   sails.services.passport.protocols.local.register(req.body, function (err, user) {
+  //   	console.log("user registered");
+  //     if (err) return next(err);
+
+  // 	// res.ok();
+  //   req.param('action', 'login');
+  //   req.param('provider', 'local');
+  //   req.param('username', identifier);
+  //   req.param('password', password);
 
 
 
@@ -43,21 +58,18 @@ _.merge(exports, {
     // sails.services.passport.callback(req,res, function (err, user) {
     // 	console.log("executed the nested callback");
     //   if (err) return next(err);
-    //   	sails.services.passport.protocols.local.login(req,identifier,password, function (err, user) {
-    // 	console.log("executed the 3rd callback");
-    //  		 if (err) return next(err);
-   	// 	 });
+      	
 
 
 
-       res.ok(user);
-    // });
-});
+//        res.ok(user);
+//     // });
+// });
 
 
 
 
-  }
+  //}
 
 
 

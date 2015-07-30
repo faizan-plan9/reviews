@@ -40,6 +40,9 @@ _.extend(passport.prototype, {
         // access was granted, the user will be logged in. Otherwise, authentication
         // has failed.
         console.log("passport service was called via callback");
+        console.log(req.session.autouser);
+        console.log(req.session.autopwd);
+        
         this.authenticate(provider, next)(req, res, req.next);
       }
     }

@@ -35,12 +35,11 @@ module.exports.routes = {
   '/': {
     view: 'homepage'
   },
-
-  '/login': {
-
-    controller: "test",
-    action:"index"
+  '/test':{
+    view: 'test'
   }
+
+
   /***************************************************************************
   *                                                                          *
   * Custom routes here...                                                    *
