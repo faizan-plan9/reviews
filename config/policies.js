@@ -38,7 +38,8 @@ module.exports.policies = {
     '*': true
   },
   UserController:{
-    'create':true
+    'create':true,
+    'RetrieveProfile':true
   }
 
 
